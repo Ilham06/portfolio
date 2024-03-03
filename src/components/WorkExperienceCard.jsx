@@ -15,11 +15,11 @@ export default function WorkExperienceCard({ experience }) {
         />
       </div>
       <div className="pl-6">
-        <h3 className="text-black-primary font-semibold text-[18px] mb-1">
+        <h3 className="text-black-primary font-semibold text-base sm:text-lg mb-1">
           {role}, {company}
         </h3>
-        <p className="text-black-main mb-1">{duration}</p>
-        <p className="text-grey-primary text-sm">{location}</p>
+        <p className="text-black-main mb-1 text-sm lg:text-base">{duration}</p>
+        <p className="text-grey-primary text-xs lg:text-sm">{location}</p>
       </div>
     </div>
   );

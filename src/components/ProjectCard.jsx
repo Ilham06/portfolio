@@ -9,16 +9,18 @@ export default function ProjectCard({ detail }) {
         {images.map((image, index) => {
           return (
             <div key={index} className="carousel-item">
-              <Image src={image} alt={index} width={600} height={285} />
+              <div className="image-container h-[285px]">
+              <Image src={image} alt={index} layout="fill" className={'image'} />
+              </div>
             </div>
           );
         })}
       </div>
       <div className="">
-        <h3 className="font-semibold text-xl text-grey-primary my-4">
+        <h3 className="font-semibold text-lg lg:text-xl text-grey-primary my-4">
           {title}, {category}
         </h3>
-        <p className="text-black-main mb-4">{description}</p>
+        <p className="text-black-main mb-4 text-sm lg:text-base">{description}</p>
         {
           stacks.map((stack, index) => {
             return (

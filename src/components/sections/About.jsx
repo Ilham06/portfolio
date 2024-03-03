@@ -21,12 +21,12 @@ export default function About() {
       <p className="text-black-main">
         here is my techstack as a software engineer
       </p>
-      <div className="flex mt-5">
+      <div className="flex flex-wrap mt-5 justify-center sm:justify-start">
         {skills.map((skill, index) => {
           return <TechIcon key={index} title={skill.title} icon={skill.icon} />;
         })}
       </div>
-      <div className="flex gap-6 mt-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-14">
          {
             techExperience.map((exp, index) => {
                return (

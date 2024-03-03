@@ -8,7 +8,7 @@ import ContactCard from "../ContactCard";
 export default function Contact() {
   return (
     <div className="mt-14">
-      <div className="bg-grey-primary-bg rounded-xl py-6 px-24 text-center">
+      <div className="bg-grey-primary-bg rounded-xl py-6 px-6 lg:px-24 text-center">
         <h2 className="font-semibold text-2xl mb-7 text-black-primary">
           Besides that, I am also avaible for  <br /> Freelancer Project
         </h2>
@@ -32,10 +32,10 @@ export default function Contact() {
             return <ContactIcon key={index} contact={sm} />;
           })}
         </div>
-        <div className="grid grid-cols-12 gap-4 mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14">
           {contacts.map((contact, index) => {
             return (
-              <div className="col-span-4" key={index}>
+              <div className="" key={index}>
                 <ContactCard contact={contact} />
               </div>
             );
