@@ -11,7 +11,7 @@ export default function Header() {
             Ilham Muhamad Suparyono
           </h3>
           <p className="text-sm text-black-main">
-            Crafting Digital Experiences: My Journey in Code.
+            Crafting Digital Experiences as a : software engineer
           </p>
         </div>
         <div className="">
