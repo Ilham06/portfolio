@@ -19,7 +19,10 @@ module.exports = {
         'black-primary-bg' : '#141414',
         'grey-primary-bg' : '#F7F7F7'
       },
+      boxShadow: {
+        "custom-shadow": '0 20px 60px 0px rgb(0 0 0 / 0.1)'
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

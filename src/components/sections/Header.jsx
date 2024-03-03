@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import MainButton from "../MainButton";
 
 export default function Header() {
   return (
     <div className="border-b pb-7">
-      <Image src="/images/me.png" alt="me" width={255} height={255} />
+      <Image src="/images/me.png" alt="me" width={255} height={255} loading="lazy" />
       <div className="flex justify-between items-center">
         <div className="">
           <h3 className="font-semibold text-3xl my-2 text-black-primary">
@@ -15,9 +16,7 @@ export default function Header() {
           </p>
         </div>
         <div className="">
-          <button className="text-whit bg-black-primary-bg text-white p-2 rounded">
-            Contact Me
-          </button>
+          <MainButton title={'Contact Me'}/>
         </div>
       </div>
     </div>
