@@ -3,7 +3,7 @@ import SecondarySectionWrapper from "../SecondarySectionWrapper";
 import WorkExperienceCard from "../WorkExperienceCard";
 import MainButton from "../MainButton";
 import { projects, workExperience } from "@/data";
-import ProjectCard from "../ProjectCard";
+import ProjectCard from "../pages/ProjectCard";
 import SecondaryProjectCard from "../SecondaryProjectCard";
 
 export default function Project() {

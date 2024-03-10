@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 
 const poppins = Poppins({
   weight: ["200","300","400","500","600"],
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
+      <NextTopLoader color="#666666" />
         {children}
         <Footer />
       </body>

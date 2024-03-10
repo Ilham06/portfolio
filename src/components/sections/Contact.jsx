@@ -35,7 +35,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14">
           {contacts.map((contact, index) => {
             return (
-              <div className="" key={index}>
+              <div className="mb-4 lg:mb-0" key={index}>
                 <ContactCard contact={contact} />
               </div>
             );

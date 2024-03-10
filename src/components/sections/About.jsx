@@ -21,7 +21,7 @@ export default function About() {
       <p className="text-black-main">
         here is my techstack as a software engineer
       </p>
-      <div className="flex flex-wrap mt-5 justify-center sm:justify-start">
+      <div className="flex flex-wrap mt-5 justify-start">
         {skills.map((skill, index) => {
           return <TechIcon key={index} title={skill.title} icon={skill.icon} />;
         })}

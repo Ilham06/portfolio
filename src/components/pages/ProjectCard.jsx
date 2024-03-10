@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DescriptionDetailWrapper from "./DescriptionDetailWrapper";
+import DescriptionDetailWrapper from "../DescriptionDetailWrapper";
 
 export default function ProjectCard({ detail }) {
   const { images, title, category, description, stacks } = detail;
   return (
-    <div className="rounded-[10px] p-4 bg-white mt-6">
-      <div className="carousel carousel-center space-x-4 rounded-lg">
+    <div className="rounded-[10px] bg-white mt-6">
+      <div className="carousel carousel-center space-x-2 rounded-t-lg">
         {images.map((image, index) => {
           return (
             <div key={index} className="carousel-item">
@@ -23,7 +23,7 @@ export default function ProjectCard({ detail }) {
           );
         })}
       </div>
-      <div className="">
+      <div className="p-4">
         <h3 className="font-semibold text-lg lg:text-xl text-black-main mt-[22px] mb-2">
           {title}
         </h3>

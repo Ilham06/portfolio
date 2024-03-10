@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"
 
 export default function WorkExperienceCard({ experience }) {
   const { image, company, location, role, duration } = experience;
   return (
+    <Link href={`/works/${company}`}>
     <div className="rounded-[10px] p-4 lg:p-8 bg-white flex items-center mt-6 cursor-pointer">
       <div className="border-r pr-4">
         <Image
@@ -22,6 +24,6 @@ export default function WorkExperienceCard({ experience }) {
         <p className="text-black-main mb-1 text-sm lg:text-base">{duration}</p>
         <p className="text-grey-primary text-xs lg:text-sm">{location}</p>
       </div>
-    </div>
+    </div></Link>
   );
 }
