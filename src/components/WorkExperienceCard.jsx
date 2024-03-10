@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function WorkExperienceCard({ experience }) {
   const { image, company, location, role, duration } = experience;
   return (
-    <div className="rounded-[10px] p-8 bg-white flex items-center mt-6 cursor-pointer">
+    <div className="rounded-[10px] p-4 lg:p-8 bg-white flex items-center mt-6 cursor-pointer">
       <div className="border-r pr-4">
         <Image
           src={image}
@@ -12,6 +12,7 @@ export default function WorkExperienceCard({ experience }) {
           width={90}
           height={90}
           style={{ borderRadius: "50%" }}
+          className="w-[50px] lg:w-[90px]"
         />
       </div>
       <div className="pl-6">

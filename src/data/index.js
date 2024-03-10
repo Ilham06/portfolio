@@ -96,7 +96,7 @@ const workExperience = [
   },
   {
     image: '/images/company/kemenag.jpeg',
-    company: 'Kementrian Agama',
+    company: 'Kemenag',
     location: 'Kab. Trenggalek',
     role: 'Intern Web Developer',
     duration: 'March 2021 - June 2021'

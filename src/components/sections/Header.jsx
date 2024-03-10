@@ -22,20 +22,7 @@ export default function Header() {
             Ilham Muhamad Suparyono
           </h3>
           <p className="text-sm text-black-main">
-            Crafting Digital Experiences as a : 
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                " Software Engineer",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                " Fullstack Javascript",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "14px", display: "inline-block", marginLeft: '6px' }}
-              repeat={Infinity}
-            />
+            Crafting Digital Experiences as a Software Engineer
           </p>
         </div>
         <div className="hidden">
