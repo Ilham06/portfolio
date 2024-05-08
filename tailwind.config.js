@@ -17,7 +17,8 @@ module.exports = {
         'black-main' : '#404040',
         'grey-primary' : '#666666',
         'black-primary-bg' : '#141414',
-        'grey-primary-bg' : '#F7F7F7'
+        'grey-primary-bg' : '#F7F9FB',
+        'blue-primary' : "#1E84EC"
       },
       boxShadow: {
         "custom-shadow": '0 20px 60px 0px rgb(0 0 0 / 0.1)'

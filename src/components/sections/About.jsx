@@ -26,15 +26,6 @@ export default function About() {
           return <TechIcon key={index} title={skill.title} icon={skill.icon} />;
         })}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-14">
-         {
-            techExperience.map((exp, index) => {
-               return (
-                  <TechExperienceCard icon={exp.icon} title={exp.title} description={exp.description} key={index}/>
-               )
-            })
-         }
-      </div>
     </div>
   );
 }
