@@ -14,7 +14,7 @@ export default function MainProjectCard({ detail, index }) {
 
   const imageContent = () => {
     return (
-      <div class="col-span-6">
+      <div class="col-span-12 lg:col-span-6">
         <div className="image-container">
           <Image
             src={images[0]}
@@ -29,13 +29,13 @@ export default function MainProjectCard({ detail, index }) {
 
   const descriptionContent = () => {
     return (
-      <div class="col-span-5 flex justify-center items-center">
-        <div className="">
+      <div class="col-span-12 lg:col-span-5 flex justify-center items-center">
+        <div className="text-center lg:text-start">
           <h3 className="font-semibold text-lg lg:text-xl mt-1 mb-4">
             {title}
           </h3>
           <p className="text-black-main text-sm lg:text-base">{description}</p>
-          <div className="mt-3 flex gap-2">
+          <div className="mt-3 flex gap-2 justify-center lg:justify-normal">
             {
               stacks.map((stack, index) => {
                 return (

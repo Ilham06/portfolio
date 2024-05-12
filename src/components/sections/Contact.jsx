@@ -7,7 +7,7 @@ import ContactCard from "../ContactCard";
 
 export default function Contact() {
   let iconDelay = 400;
-  let cardDelay = 700;
+  let cardDelay = 600;
   return (
     <div className="mt-24" id="contact">
       <div

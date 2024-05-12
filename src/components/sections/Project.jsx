@@ -11,7 +11,7 @@ export default function Project() {
   let delay = 100;
   return (
     <section className="mt-24" id="project">
-      <div className="text-black-primary">
+      <div className="text-black-primary text-center lg:text-start">
         <h3 className="font-semibold text-2xl mb-3">
           Personal
           <span className="text-blue-primary"> Projects</span>

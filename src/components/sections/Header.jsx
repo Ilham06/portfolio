@@ -21,7 +21,7 @@ export default function Header() {
       </div>
       <div className="mt-10">
         <div className="text-center">
-          <h3 className="font-semibold mb-8 text-black-primary text-6xl">
+          <h3 className="font-semibold mb-8 text-black-primary text-5xl lg:text-6xl">
             Hello, Im <span className="text-blue-primary">Ilham.</span>
           </h3>
           <p className=" text-black-main text-lg">

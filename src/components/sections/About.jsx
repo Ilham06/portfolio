@@ -8,8 +8,8 @@ export default function About() {
   let techDelay = 0;
   return (
     <div className="mt-24" id="about">
-      <div className="flex items-center" data-aos-duration="1000" data-aos="fade-up">
-        <div className="w-[25%]">
+      <div className="flex items-center flex-wrap justify-center gap-10 lg:gap-0" data-aos-duration="1000" data-aos="fade-up">
+        <div className="lg:w-[25%]">
           <Image
             src="/images/me.png"
             alt="me"
@@ -18,7 +18,7 @@ export default function About() {
             loading="lazy"
           />
         </div>
-        <div className="w-[70%]">
+        <div className="lg:w-[70%] text-center lg:text-start">
           <h3 className="text-2xl mb-4 font-semibold text-black-primary">
             <span className="text-blue-primary">About</span> Me
           </h3>
@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex flex-wrap mt-5 justify-start ml-9">
+      <div className="flex flex-wrap mt-5 justify-center lg:justify-start ml-9">
         {skills.map((skill, index) => {
           techDelay += 50;
           return (
