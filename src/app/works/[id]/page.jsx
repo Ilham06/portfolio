@@ -7,7 +7,7 @@ import WorkExperienceDetail from "@/components/pages/WorkExperienceDetail";
 
 export default function page() {
   return (
-    <div className="container mx-auto px-4 lg:px-72 pt-14">
+    <div className="container mx-auto px-2 lg:px-72 pt-14">
       <Link href="/">
         <button className="btn mb-2">Back</button>
       </Link>
@@ -18,7 +18,7 @@ export default function page() {
 
         <WorkExperienceDetail detail={workExperience[0]}/>
 
-        <div className="mt-16">
+        <div className="mt-16" >
           <div className="text-black-primary">
             <h3 className="font-semibold text-2xl mb-3">Other Experience</h3>
             <p>

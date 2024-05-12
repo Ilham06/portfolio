@@ -5,22 +5,12 @@ import Contact from "@/components/sections/Contact";
 import Header from "@/components/sections/Header";
 import Project from "@/components/sections/Project";
 import WorkExperience from "@/components/sections/WorkExperience";
-import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import TechExperienceCard from "@/components/TechExperienceCard";
 import SkillExperience from "@/components/sections/SkillExperience";
 import Navbar from "@/components/sections/Navbar";
+import useAOS from "@/hooks/useAos";
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      // Global settings
-      duration: 500, // animation duration in milliseconds
-      once: true, // whether animation should happen only once - while scrolling down
-    });
-  }, []);
+  useAOS()
   return (
     <>
       <div className="bg-[#F7F9FB] pb-52">

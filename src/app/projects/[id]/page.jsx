@@ -6,7 +6,7 @@ import SecondaryProjectCard from "@/components/SecondaryProjectCard";
 import Link from "next/link";
 export default function page() {
   return (
-    <div className="container mx-auto px-4 lg:px-72 pt-14">
+    <div className="container mx-auto px-2 lg:px-72 pt-14">
       <Link href='/'>
         <button className="btn mb-2">Back</button>
       </Link>
