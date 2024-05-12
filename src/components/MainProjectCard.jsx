@@ -51,7 +51,7 @@ export default function MainProjectCard({ detail, index }) {
 
   return (
     <Link href={`/projects/${title}`}>
-      <div className="grid grid-cols-12 gap-5 rounded-[10px] p-4 cursor-pointer bg-white hover:translate-y-[-5px] duration-500">
+      <div className="grid grid-cols-12 gap-5 rounded-[10px] p-4 cursor-pointer bg-white hover:translate-y-[-5px] duration-500 ">
         {!isOddIndex(index) ? (
           <>
             {imageContent()}

@@ -5,14 +5,24 @@ import MainButton from "../MainButton";
 import { workExperience } from "@/data";
 
 export default function WorkExperience() {
+  let delay = 100;
   return (
-    <section className="mt-14">
+    <section className="mt-24" id="experience">
       <SecondarySectionWrapper
-        title={"Work Experience"}
+        title={
+          <>
+            <span className="text-blue-primary">Work</span> Experience
+          </>
+        }
         subtitle={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
       >
         {workExperience.map((exp, index) => {
-          return <WorkExperienceCard key={index} experience={exp} />;
+          delay += 100
+          return (
+            <div className="" key={index} data-aos-delay={delay} data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500">
+              <WorkExperienceCard experience={exp} />
+            </div>
+          );
         })}
       </SecondarySectionWrapper>
     </section>

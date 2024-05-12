@@ -21,7 +21,8 @@ module.exports = {
         'blue-primary' : "#1E84EC"
       },
       boxShadow: {
-        "custom-shadow": '0 20px 60px 0px rgb(0 0 0 / 0.1)'
+        "custom-shadow": '0 20px 60px 0px rgb(0 0 0 / 0.1)',
+        "custom-shadow2": '0 10px 60px 0px rgb(0 0 0 / 0.05)',
       }
     },
   },

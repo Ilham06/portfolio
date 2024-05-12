@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TechExperienceCard from "@/components/TechExperienceCard";
 import SkillExperience from "@/components/sections/SkillExperience";
+import Navbar from "@/components/sections/Navbar";
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Home() {
     <>
       <div className="bg-[#F7F9FB] pb-52">
         <div className="container mx-auto px-4 lg:px-60">
+          <Navbar/>
           <Header />
           <About />
         </div>

@@ -6,8 +6,8 @@ import DescriptionDetailWrapper from "../DescriptionDetailWrapper";
 export default function ProjectCard({ detail }) {
   const { images, title, category, description, stacks } = detail;
   return (
-    <div className="rounded-[10px] bg-white mt-6">
-      <div className="carousel carousel-center space-x-2 rounded-t-lg">
+    <div className="rounded-[10px] bg-white mt-6 p-0 lg:p-4">
+      <div className="carousel carousel-center space-x-2 rounded-t-lg lg:rounded-b-lg">
         {images.map((image, index) => {
           return (
             <div key={index} className="carousel-item">
