@@ -11,7 +11,7 @@ export default function ContactCard({ contact }) {
         {contact.title}
       </h3>
       <p className="text-black-main mb-2">{contact.description}</p>
-      <Link href={contact.url}>
+      <Link href={contact.url} target="_blank">
         <p className="text-blue-primary font-semibold">{contact.value}</p>
       </Link>
     </div>

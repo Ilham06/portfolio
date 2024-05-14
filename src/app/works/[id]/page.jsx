@@ -4,6 +4,7 @@ import SecondarySectionWrapper from "@/components/SecondarySectionWrapper";
 import WorkExperienceCard from "@/components/WorkExperienceCard";
 import { workExperience } from "@/data";
 import WorkExperienceDetail from "@/components/pages/WorkExperienceDetail";
+import { useParams } from "next/navigation";
 
 export default function page() {
   return (

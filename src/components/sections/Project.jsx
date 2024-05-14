@@ -16,7 +16,7 @@ export default function Project() {
           Personal
           <span className="text-blue-primary"> Projects</span>
         </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>I created several amazing personal projects for educational.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mt-6">
         {projects.map((project, index) => {
@@ -35,7 +35,7 @@ export default function Project() {
         })}
       </div>
       <div className="text-center mt-10" data-aos-delay="300" data-aos="fade-up" data-aos-duration="500" >
-        <MainButton title={"view my other project in github"} />
+        <MainButton title={"view my other project in github"} path={'https://github.com/Ilham06'} target={"_blank"}/>
       </div>
     </section>
   );

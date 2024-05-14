@@ -5,7 +5,18 @@ import Image from "next/image";
 import DescriptionDetailWrapper from "../DescriptionDetailWrapper";
 
 export default function WorkExperienceDetail({ detail }) {
-  const { image, company, location, role, duration } = detail;
+  console.log(detail)
+  const {
+    image,
+    company,
+    location,
+    role,
+    duration,
+    summary,
+    jobDesk,
+    projects,
+    stacks,
+  } = detail;
   return (
     <div className="rounded-[10px] bg-white mt-6 p-6">
       <div className="">
@@ -40,65 +51,27 @@ export default function WorkExperienceDetail({ detail }) {
         </table>
       </div>
       <DescriptionDetailWrapper title={"Job Desk"}>
-        <p className="text-black-main text-sm lg:text-base">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eligendi
-          laboriosam eum veritatis, ex similique nam dolor porro, ullam
-          repellendus aspernatur animi exercitationem nihil magnam ducimus fugit
-          aliquam consequuntur accusamus quibusdam repudiandae omnis ut delectus
-          incidunt quos. Sit porro maiores pariatur beatae ut officia,
-          temporibus vel, minus ratione magni eveniet!
-        </p>
+        <p className="text-black-main text-sm lg:text-base">{summary}</p>
       </DescriptionDetailWrapper>
       <DescriptionDetailWrapper title={"What i do here?"}>
         <ul className="list-disc ml-6 text-sm lg:text-base">
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque,
-            aut.
-          </li>
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
-            explicabo!
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-            consequatur.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-            similique?
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, est?
-          </li>
+          {jobDesk.map((job, index) => {
+            return <li key={index}>{job}</li>;
+          })}
         </ul>
       </DescriptionDetailWrapper>
       <DescriptionDetailWrapper title={"Projects"}>
         <ul className="list-disc ml-6 text-sm lg:text-base">
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque,
-            aut.
-          </li>
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
-            explicabo!
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-            consequatur.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-            similique?
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, est?
-          </li>
+          {projects.map((project, index) => {
+            return <li key={index}>{project.name}</li>;
+          })}
         </ul>
       </DescriptionDetailWrapper>
       <DescriptionDetailWrapper title={"Techstack used"}>
         <ul className="list-disc ml-6 text-sm lg:text-base">
-          <li>NestJs</li>
-          <li>NextJs</li>
+          {stacks.map((stack, index) => {
+            return <li key={index}>{stack}</li>;
+          })}
         </ul>
       </DescriptionDetailWrapper>
     </div>

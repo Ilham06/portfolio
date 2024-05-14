@@ -4,12 +4,13 @@ import IgIcon from "../icons/ig-icon";
 import ContactIcon from "../ContactIcon";
 import { contacts, socialMedia } from "@/data";
 import ContactCard from "../ContactCard";
+import Link from "next/link";
 
 export default function Contact() {
   let iconDelay = 400;
   let cardDelay = 600;
   return (
-    <div className="mt-24" id="contact">
+    <div className="my-24" id="contact">
       <div
         className="bg-grey-primary-bg rounded-xl py-6 px-6 lg:px-24 text-center"
         data-aos="zoom-in"
@@ -32,7 +33,7 @@ export default function Contact() {
             goverement, company profiles or others.
           </span>
         </p>
-        <MainButton title={"contact me"} />
+        <MainButton title={"contact me"} path="#personal-contact" />
       </div>
       <div className="text-center mt-14">
         <div
@@ -41,11 +42,14 @@ export default function Contact() {
           data-aos-delay="500"
           data-aos-duration="900"
         >
-          <h3 className="text-black-primary font-semibold text-2xl mb-3">
+          <h3
+            className="text-black-primary font-semibold text-2xl mb-3"
+            id="personal-contact"
+          >
             Personal <span className="text-blue-primary">Contact</span>
           </h3>
           <p className="text-black-main mb-8">
-            It will be nice if we can work together!
+            Im always available for you, it will be nice if we can work together!
           </p>
         </div>
         <div className="flex justify-center gap-3">
@@ -66,7 +70,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14">
           {contacts.map((contact, index) => {
-            cardDelay += 200
+            cardDelay += 200;
             return (
               <div
                 className="mb-4 lg:mb-0"

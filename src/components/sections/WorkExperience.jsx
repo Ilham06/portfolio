@@ -14,7 +14,7 @@ export default function WorkExperience() {
             <span className="text-blue-primary">Work</span> Experience
           </>
         }
-        subtitle={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
+        subtitle={"I have some amazing work experience in various fields such as start-ups, government, and vendors."}
       >
         {workExperience.map((exp, index) => {
           delay += 100

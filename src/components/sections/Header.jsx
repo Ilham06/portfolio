@@ -25,9 +25,7 @@ export default function Header() {
             Hello, Im <span className="text-blue-primary">Ilham.</span>
           </h3>
           <p className=" text-black-main text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-            at dolores enim nostrum, tenetur autem dolor rem doloribus esse
-            obcaecati.
+           <span className="font-medium">My journey as a Software Engginer,</span> to crafting a wonderfull digital experiences. Write line by line from the heart to produce wonderfull projects.
           </p>
         </div>
         <div className="flex justify-center mt-10">
