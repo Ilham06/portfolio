@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 
 const poppins = Poppins({
-  weight: ["200","300","400","500","600"],
+  weight: ["200", "300", "400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" class="scroll-smooth" data-theme="light">
       <body className={poppins.className}>
-      <NextTopLoader color="#666666" />
+        <NextTopLoader color="#666666" />
         {children}
         <Footer />
       </body>

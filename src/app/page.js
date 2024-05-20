@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <>
       <div className="bg-[#F7F9FB] pb-52">
-        <div className="container mx-auto px-4 lg:px-60">
+        <div className="container mx-auto max-w-[1200px] px-4">
           <Navbar/>
           <Header />
           <About />
         </div>
       </div>
-      <div className="container mx-auto px-4 lg:px-60 mt-[-200px]">
+      <div className="container mx-auto px-4 max-w-[1200px] mt-[-200px]">
         <SkillExperience />
       </div>
-      <div className="container mx-auto px-4 lg:px-60 overflow-hidden">
+      <div className="container mx-auto px-4 max-w-[1200px] overflow-hidden">
         <WorkExperience />
         <Project />
         <Contact />

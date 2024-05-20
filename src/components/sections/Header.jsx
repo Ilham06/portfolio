@@ -1,13 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import MainButton from "../MainButton";
 import { TypeAnimation } from "react-type-animation";
+import axios from "axios";
 
 export default function Header() {
+
   return (
-    <div className="h-svh flex flex-col justify-center mt-[-100px]" id="header" data-aos-duration="1100" data-aos="fade-up">
+    <div
+      className="h-svh flex flex-col justify-center mt-[-100px]"
+      id="header"
+      data-aos-duration="1100"
+      data-aos="fade-up"
+    >
       <div className="flex justify-center">
         <div className="bg-[#E0CFFE] rounded-[50%] overflow-hidden">
           <Image
@@ -25,7 +32,11 @@ export default function Header() {
             Hello, Im <span className="text-blue-primary">Ilham.</span>
           </h3>
           <p className=" text-black-main text-lg">
-           <span className="font-medium">My journey as a Software Engginer,</span> to crafting a wonderfull digital experiences. Write line by line from the heart to produce wonderfull projects.
+            <span className="font-medium">
+              My journey as a Software Engginer,
+            </span>{" "}
+            to crafting a wonderfull digital experiences. Write line by line
+            from the heart to produce wonderfull projects.
           </p>
         </div>
         <div className="flex justify-center mt-10">
