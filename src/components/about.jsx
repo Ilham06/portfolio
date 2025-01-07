@@ -23,7 +23,7 @@ export default function About() {
             <span className="text-blue-primary">About</span> Me
           </h2>
           <p className="mb-4 text-black-main">
-            I'am a software engineer with over 3 years of experience in web and
+            Iam a software engineer with over 3 years of experience in web and
             mobile development, primarily focused on the education, business,
             and government sectors. With expertise in JavaScript and its
             ecosystem, I have worked with a variety of modern tools and

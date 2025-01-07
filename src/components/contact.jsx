@@ -64,7 +64,7 @@ export default function Contact() {
           </h3>
           <p className="text-black-main mb-8">
             Get in touch with us! Whether you have questions, need support, or
-            want to collaborate, <br /> we're here to help. Reach out via phone,
+            want to collaborate, <br /> we re here to help. Reach out via phone,
             email, or visit us at our location. <br /> We look forward to
             connecting with you!
           </p>
@@ -104,3 +104,5 @@ export default function Contact() {
     </section>
   );
 }
+
+
