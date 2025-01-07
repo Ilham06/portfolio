@@ -1,15 +1,20 @@
-'use client'
+"use client";
 
-import { experiences } from "@/data";
+import { experiences, linkedin, product } from "@/data";
 import Image from "next/image";
 import React from "react";
 import MainButton from "./buttons/MainButton";
 import CountUp from "react-countup";
+import Link from "next/link";
 
 export default function About() {
   return (
     <section className="py-12" id="about">
-      <div className="flex items-center flex-wrap justify-center gap-10 lg:gap-4">
+      <div
+        className="flex items-center flex-wrap justify-center gap-10 lg:gap-4"
+        data-aos-duration="1000"
+        data-aos="fade-up"
+      >
         <div className="lg:w-[25%]">
           <Image src="/images/me.png" width="223" height="255" alt="me" />
         </div>
@@ -23,13 +28,20 @@ export default function About() {
             and government sectors. With expertise in JavaScript and its
             ecosystem, I have worked with a variety of modern tools and
             technologies to deliver impactful solutions. In addition to my
-            professional work, I also manage my personal project, kampusdev.com,
-            aimed at providing valuable resources for developers and students in
-            the tech field. I am passionate about innovation and leveraging
+            professional work, I also manage my personal project,{" "}
+            <Link target="_blank" href={product.url}>
+              <span className="font-bold text-blue-primary">
+                {product.name}
+              </span>
+            </Link>
+            , aimed at providing valuable resources for developers and students
+            in the tech field. I am passionate about innovation and leveraging
             technology to solve real-world challenges.
           </p>
           <div className="flex gap-3 flex-wrap justify-center lg:justify-start">
             <MainButton
+              target={"_blank"}
+              path={linkedin}
               title={"More about me"}
               icon={
                 <svg
@@ -49,6 +61,8 @@ export default function About() {
               }
             />
             <MainButton
+              target={"_blank"}
+              path={product.url}
               title={"View my product"}
               icon={
                 <svg
@@ -70,18 +84,23 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="bg-[#F7F9FB] w-full mt-16 p-6 rounded-xl grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div
+        className="bg-[#F7F9FB] w-full mt-16 p-6 rounded-xl grid grid-cols-1 lg:grid-cols-3 gap-4"
+        data-aos-duration="1000"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         {experiences.map((experience, index) => {
           return (
             <div className="mb-8 lg:mb-0" key={index}>
               <h2 className="text-4xl font-extrabold mb-2 text-[#1E84EC]">
-              <CountUp
-                start={0}
-                end={experience.title}
-                duration={2.5}
-                separator=","
-              />
-              {index == 0 && 'TH+'}
+                <CountUp
+                  start={0}
+                  end={experience.title}
+                  duration={2.5}
+                  separator=","
+                />
+                {index == 0 && "TH+"}
               </h2>
               <p className="text-sm text-[#404040]">{experience.description}</p>
             </div>

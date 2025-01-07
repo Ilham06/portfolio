@@ -4,7 +4,12 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="text-center py-24" id="header">
+    <div
+      className="text-center py-24"
+      id="header"
+      data-aos-duration="1100"
+      data-aos="fade-up"
+    >
       <div className="flex justify-center mb-6">
         <div className="bg-[#E0CFFE] rounded-[50%] overflow-hidden">
           <Image
@@ -20,9 +25,7 @@ export default function Header() {
         Hello, I’m Ilham
       </h2>
       <p className="text-[18px] text-black-main mb-5">
-        Gifted with the skill to create charming illustrations and captivating
-        animated <br /> stories, they bring to life a dynamic world where the
-        limits <br /> of creativity are nonexistent
+      Passionate about technology, crafting scalable and innovative solutions that elegantly solve real-world challenges. Work blends functionality with creativity, transforming complex problems into seamless digital experiences.
       </p>
       <Link href={"#about"}>
         <button className="btn btn-circle bg-blue-primary text-slate-200 hover:bg-blue-primary hover:translate-y-2">
