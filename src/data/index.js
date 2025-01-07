@@ -66,15 +66,19 @@ const works = [
     ],
     projects: [
       {
-        name: "E-FORM",
+        name: "Crime Reporting System",
         description: "",
       },
       {
-        name: "DOKRIM",
+        name: "Crime Document System",
         description: "",
       },
       {
-        name: "E-PPNS",
+        name: "Survey/FORM App",
+        description: "",
+      },
+      {
+        name: "Investigation System",
         description: "",
       },
     ],
@@ -88,13 +92,14 @@ const works = [
     role: "Fullstack Web Developer",
     duration: "May 2022 - September 2023",
     summary:
-      "Vorta Siber ​​​​Indonesia is a company with a focus on building a platform that can help companies run their business safely and privately by utilizing private blockchain. Here, my role is as a software engineer who focuses on the frontend web development, and occasionally the backend to handle some government projects.",
+      "Goorita was founded in 2020 with the aim of expanding and exporting local products to the global market. Goorita is here to support local Indonesian businesses so that they can compete globally with the easiest solution in marketing and shipping Indonesian local products worldwide. Goorita supports Indonesian products to compete globally by streamlining the market supply process.",
     jobDesk: [
       "Troubleshoot, maintenance and upgrade the internal project features.",
       "Contribute with designers, other developers, and project managers to working on internal projects.",
-      "Design and develop project using NestJs, and NextJs Techstacks.",
-      "Meeting and present with clients for ongoing projects.",
-      "Work professionally with agile methods using Trello software.",
+      "Design and develop project using Laravel, and ReactJs Techstacks.",
+      "Handle integrations with third-party APIs.",
+      "Mentoring junior engineer on development and adapt with internal techstack.",
+      "Work professionally with agile methods using Jira software.",
     ],
     projects: [
       {
@@ -118,7 +123,7 @@ const works = [
         description: "",
       },
     ],
-    stacks: ["ReactJs", "NextJs", "NestJs", "Redux", "Material Ui", "Docker"],
+    stacks: ["Typescript", "ReactJs", "Laravel", "Redux", "Material Ui"],
   },
   {
     id: 2,
@@ -127,6 +132,18 @@ const works = [
     location: "Kab. Trenggalek",
     role: "Intern Web Developer",
     duration: "March 2021 - June 2021",
+    jobDesk: [
+      "Develop a Inventory management information system project.",
+      "Assist in maintenance internal website",
+    ],
+    summary: "Kemenag Trenggalek merujuk pada Kementerian Agama Kabupaten Trenggalek, yang merupakan bagian dari kementerian pemerintah Indonesia yang bertugas mengelola urusan agama dan keagamaan di tingkat kabupaten. Kementerian Agama memiliki berbagai fungsi, antara lain penyelenggaraan pendidikan agama, pelayanan haji, pemberdayaan zakat, serta pengawasan dan bimbingan terhadap kegiatan keagamaan di daerah.  Di Trenggalek, Kemenag juga berperan dalam memfasilitasi pendidikan agama Islam melalui madrasah, serta program-program sosial lainnya yang berkaitan dengan agama dan keagamaan.",
+    projects: [
+      {
+        name: "Inventory Management System",
+        description: "",
+      },
+    ],
+    stacks: ["Laravel", "Javascript"],
   },
 ];
 
