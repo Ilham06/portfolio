@@ -1,10 +1,10 @@
 import React from "react";
 // import MainButton from "../MainButton";
 import { contacts, socialMedia } from "@/data";
-import ContactCard from "./ContactCard";
-import ContactIcon from "./ContactIcon";
 import Link from "next/link";
 import MainButton from "./buttons/MainButton";
+import ContactCard from "./contactCard";
+import ContactIcon from "./contactIcon";
 
 export default function Contact() {
   let iconDelay = 400;
