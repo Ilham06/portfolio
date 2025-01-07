@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ExperienceCard({ work }) {
-  const { image, company, location, role, duration } = work;
+  const { id, image, company, location, role, duration } = work;
   return (
-    <Link href={`/works/${company}`}>
+    <Link href={`/work/${id}`}>
       <div className="rounded-[10px] p-4 lg:p-8 bg-white flex items-center mt-6 cursor-pointer hover:translate-y-[-2px] duration-500">
         <div className="border-r pr-4">
           <Image

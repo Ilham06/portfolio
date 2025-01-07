@@ -20,7 +20,7 @@ export default function Services() {
           cardDelay += 200;
           return (
             <div
-              className="text-start bg-white p-8 rounded-xl"
+              className="text-start bg-white p-8 rounded-xl cursor-pointer"
               key={index}
               data-aos-duration="1000"
               data-aos="fade-up"

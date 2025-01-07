@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto max-w-[1200px] px-4 lg:px-36 pb-16">
-        <Navbar />
+        {/* <Navbar /> */}
         <Header/>
         <About/>
       </div>

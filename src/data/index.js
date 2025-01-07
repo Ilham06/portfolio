@@ -49,6 +49,7 @@ const experiences = [
 
 const works = [
   {
+    id: 0,
     image: "/images/company/vorta.jpeg",
     company: "Vorta",
     location: "Mampang Prapatan, South Jakarta",
@@ -80,6 +81,7 @@ const works = [
     stacks: ["ReactJs", "NextJs", "NestJs", "Redux", "Material Ui", "Docker"],
   },
   {
+    id: 1,
     image: "/images/company/goorita.jpeg",
     company: "Goorita",
     location: "Tebet, South Jakarta",
@@ -119,6 +121,7 @@ const works = [
     stacks: ["ReactJs", "NextJs", "NestJs", "Redux", "Material Ui", "Docker"],
   },
   {
+    id: 2,
     image: "/images/company/kemenag.jpeg",
     company: "Kemenag",
     location: "Kab. Trenggalek",
