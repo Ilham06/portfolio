@@ -6,16 +6,21 @@ pipeline {
                 git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/Ilham06/portfolio'
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
+            steps {
+               bat 'npm install'
+            }
+         }
+        stage('Build the app') {
             steps {
                 echo 'Building...'
-                sh 'npm run install'  // Sesuaikan dengan build tool-mu
+                bat 'npm run build'  // Sesuaikan dengan build tool-mu
             }
         }
-        stage('Start') {
+        stage('Start the app') {
             steps {
                 echo 'Running...'
-                sh 'npm run start'  // Sesuaikan jika menggunakan testing
+                bat 'npm run start'  // Sesuaikan jika menggunakan testing
             }
         }
       //   stage('Deploy') {
