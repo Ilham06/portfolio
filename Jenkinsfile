@@ -6,6 +6,11 @@ pipeline {
                 git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/Ilham06/portfolio'
             }
         }
+        stage('Install Dependencies') {
+            steps {
+               bat 'npm install'
+            }
+         }
         stage('Build the app') {
             steps {
                 echo 'Building...'
