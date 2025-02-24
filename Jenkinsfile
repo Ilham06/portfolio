@@ -9,13 +9,13 @@ pipeline {
         stage('Build the app') {
             steps {
                 echo 'Building...'
-                sh 'npm run install'  // Sesuaikan dengan build tool-mu
+                bat 'npm run install'  // Sesuaikan dengan build tool-mu
             }
         }
         stage('Start the app') {
             steps {
                 echo 'Running...'
-                sh 'npm run start'  // Sesuaikan jika menggunakan testing
+                bat 'npm run start'  // Sesuaikan jika menggunakan testing
             }
         }
       //   stage('Deploy') {
