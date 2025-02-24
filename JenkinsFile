@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/Ilham06/portfolio'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'npm run install'  // Sesuaikan dengan build tool-mu
+            }
+        }
+        stage('Start') {
+            steps {
+                echo 'Running...'
+                sh 'npm run start'  // Sesuaikan jika menggunakan testing
+            }
+        }
+      //   stage('Deploy') {
+      //       steps {
+      //           echo 'Deploying...'
+      //           sh './deploy.sh'  // Jika ada script deployment
+      //       }
+      //   }
+    }
+}
