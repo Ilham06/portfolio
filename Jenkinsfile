@@ -9,7 +9,7 @@ pipeline {
         stage('Build the app') {
             steps {
                 echo 'Building...'
-                bat 'npm run install'  // Sesuaikan dengan build tool-mu
+                bat 'npm run build'  // Sesuaikan dengan build tool-mu
             }
         }
         stage('Start the app') {
