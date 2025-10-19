@@ -50,13 +50,13 @@ const experiences = [
 const works = [
   {
     id: 0,
-    image: "/images/company/vorta.jpeg",
-    company: "Vorta",
+    image: "/images/company/bs.png",
+    company: "PT. Berkah Sejati",
     location: "Mampang Prapatan, South Jakarta",
     role: "Software Engineer",
     duration: "September 2023 - Present",
     summary:
-      "Vorta Siber ​​​​Indonesia is a company with a focus on building a platform that can help companies run their business safely and privately by utilizing private blockchain. Here, my role is as a software engineer who focuses on the frontend web development, and occasionally the backend to handle some government projects.",
+      "PT Berkah Sejati is a company with a focus on building a platform that can help companies run their business safely and privately by utilizing private blockchain. Here, my role is as a software engineer who focuses on the frontend web development, and occasionally the backend to handle some government projects.",
     jobDesk: [
       "Troubleshoot, maintenance and upgrade the internal project features.",
       "Contribute with designers, other developers, and project managers to working on internal projects.",

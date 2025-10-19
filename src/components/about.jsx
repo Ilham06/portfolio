@@ -16,7 +16,7 @@ export default function About() {
         data-aos="fade-up"
       >
         <div className="lg:w-[25%]">
-          <Image src="/images/me.png" width="223" height="255" alt="me" />
+          <Image src="/images/about-me.png" width="223" height="255" alt="me" />
         </div>
         <div className="lg:w-[70%] text-center lg:text-start">
           <h2 className="font-bold text-2xl mb-4 text-black-primary">
@@ -27,15 +27,7 @@ export default function About() {
             mobile development, primarily focused on the education, business,
             and government sectors. With expertise in JavaScript and its
             ecosystem, I have worked with a variety of modern tools and
-            technologies to deliver impactful solutions. In addition to my
-            professional work, I also manage my personal project,{" "}
-            <Link target="_blank" href={product.url}>
-              <span className="font-bold text-blue-primary">
-                {product.name}
-              </span>
-            </Link>
-            , aimed at providing valuable resources for developers and students
-            in the tech field. I am passionate about innovation and leveraging
+            technologies to deliver impactful solutions. I am passionate about innovation and leveraging
             technology to solve real-world challenges.
           </p>
           <div className="flex gap-3 flex-wrap justify-center lg:justify-start">
