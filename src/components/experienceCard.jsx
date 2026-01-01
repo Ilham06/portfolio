@@ -6,7 +6,7 @@ export default function ExperienceCard({ work }) {
   const { id, image, company, location, role, duration } = work;
 
   return (
-    <Link href={`/work/${id}`} className="block">
+    <Link href={`/work/${id}`} className="block" scroll>
       <article
         className="
           group relative overflow-hidden

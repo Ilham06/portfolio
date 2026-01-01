@@ -146,6 +146,7 @@ export default function Page({ params }) {
                   key={index}
                   href={`/projects/${detail.id}/${index}`}
                   className="block group"
+                  scroll
                 >
                   <div
                     className="

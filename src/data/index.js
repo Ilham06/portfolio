@@ -58,44 +58,46 @@ const works = [
      FTL GYM
   ===================================================== */
   {
-    id: 0,
-    image: "/images/company/ftl.png",
-    company: "FTL Gym",
-    location: "Tanah Abang, Central Jakarta",
-    role: "Mobile Developer",
-    duration: "Desember 2025 – Present",
-    summary:
-      "FTL Gym is a fitness and training company focused on delivering a modern gym experience through digital products. As a Mobile Developer, I build and maintain mobile applications that support member engagement, internal operations, and daily business workflows.",
-    jobDesk: [
-      "Develop and maintain production-ready mobile applications.",
-      "Collaborate closely with designers and product owners.",
-      "Integrate mobile applications with backend services and APIs.",
-      "Improve performance, stability, and overall user experience.",
-      "Participate in planning, testing, and continuous improvement cycles.",
-    ],
-    projects: [
-      {
-        name: "FTL Stride App",
-        description:
-          "A mobile application that helps gym members manage schedules, memberships, and training activities.",
-        fullDescription:
-          "The FTL Gym Mobile App centralizes essential member interactions into a single mobile experience. The application allows users to view class schedules, manage memberships, and stay engaged with their training activities. The focus of this project is reliability, performance, and a clean user interface that works smoothly across devices.",
-        images: [
-          "/images/projects/banner-dummy.png",
-          "/images/projects/ftl-mobile-1.png",
-          "/images/projects/ftl-mobile-2.png",
-        ],
-        tasks: [
-          "Develop core mobile application features.",
-          "Integrate REST APIs for membership and scheduling data.",
-          "Ensure consistent UX and responsive interactions.",
-          "Fix bugs and improve application stability.",
-          "Collaborate with internal teams to iterate on features.",
-        ],
-      },
-    ],
-    stacks: ["React Native", "JavaScript", "REST API", "Firebase", "Git"],
-  },
+  id: 0,
+  image: "/images/company/ftl.png",
+  company: "FTL Gym",
+  location: "Tanah Abang, Central Jakarta",
+  role: "Mobile Developer",
+  duration: "December 2025 – Present",
+  summary:
+    "FTL Gym is a fitness and training company focused on delivering a modern gym experience through digital products. As a Mobile Developer, I work on building and maintaining mobile applications that enhance member engagement, support internal operations, and enable social interaction within the gym ecosystem.",
+  jobDesk: [
+    "Develop and maintain production-ready mobile applications using React Native.",
+    "Collaborate closely with designers and product owners to deliver intuitive user experiences.",
+    "Integrate mobile applications with backend services and REST APIs.",
+    "Improve application performance, stability, and overall usability across devices.",
+    "Participate in planning, testing, and continuous improvement cycles.",
+  ],
+  projects: [
+    {
+      name: "FTL Stride App",
+      description:
+        "A mobile application designed to support gym members with schedules, memberships, training activities, and social interaction features.",
+      fullDescription:
+        "FTL Stride App centralizes essential member interactions into a single mobile experience. The application allows users to view class schedules, manage memberships, track training activities, and connect with other members through a Friends feature. This feature enables users to discover gym buddies, build workout connections, and stay motivated together. The project focuses on delivering a reliable, performant, and clean user experience across devices.",
+      images: [
+        "/images/projects/banner-dummy.png",
+        "/images/projects/ftl-mobile-1.png",
+        "/images/projects/ftl-mobile-2.png",
+      ],
+      tasks: [
+        "Develop core mobile application features and screens.",
+        "Implement the Friends module, allowing users to discover and connect with gym buddies.",
+        "Integrate REST APIs for membership data, schedules, and social interactions.",
+        "Ensure consistent UX, smooth navigation, and responsive interactions.",
+        "Fix bugs and improve application stability based on user feedback.",
+        "Collaborate with internal teams to iterate and enhance application features.",
+      ],
+    },
+  ],
+  stacks: ["React Native", "JavaScript", "Express JS", "REST API", "Firebase", "Git"],
+},
+
 
   /* =====================================================
      PT BERKAH SEJATI (GOVERNMENT PROJECTS – NDA)
