@@ -18,13 +18,18 @@ export default function Contact() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        {/* Decorative circle — left */}
-        <div className="pointer-events-none absolute -left-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10" />
-        <div className="pointer-events-none absolute -left-10 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10" />
+        {/* Decorative circle — left (breathing) */}
+        <div className="pointer-events-none absolute -left-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10 animate-breathe" style={{ animationDelay: '0s' }} />
+        <div className="pointer-events-none absolute -left-10 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10 animate-breathe" style={{ animationDelay: '1s' }} />
 
-        {/* Decorative circle — right */}
-        <div className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10" />
-        <div className="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10" />
+        {/* Decorative circle — right (breathing) */}
+        <div className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10 animate-breathe" style={{ animationDelay: '2s' }} />
+        <div className="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-white/10 animate-breathe" style={{ animationDelay: '3s' }} />
+
+        {/* Floating particles */}
+        <div className="pointer-events-none absolute top-8 left-[15%] w-2 h-2 rounded-full bg-white/20 animate-float" />
+        <div className="pointer-events-none absolute top-12 right-[20%] w-1.5 h-1.5 rounded-full bg-white/15 animate-float-slow" />
+        <div className="pointer-events-none absolute bottom-10 left-[30%] w-2.5 h-2.5 rounded-full bg-white/10 animate-float-reverse" />
 
         {/* Text */}
         <h2 className="relative text-3xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
@@ -40,10 +45,10 @@ export default function Contact() {
 
         {/* Button */}
         <Link href="#my-contact">
-          <button className="relative inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 shadow-sm">
+          <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-50 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] active:translate-y-0 transition-all duration-300 shadow-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -72,7 +77,7 @@ export default function Contact() {
           Get in touch
         </span>
         <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-          Let&apos;s <span className="text-blue-600">connect</span>
+          Let&apos;s <span className="text-gradient-blue">connect</span>
         </h3>
         <p className="text-gray-500 mb-10 max-w-xl mx-auto text-base leading-relaxed">
           Feel free to reach out via social media or direct contact.

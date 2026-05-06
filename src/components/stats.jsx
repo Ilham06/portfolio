@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import CountUp from "react-countup";
 
 const stats = [
   {
-    value: "5+",
+    value: 5,
+    suffix: "+",
     label: "Years of experience",
     description: "Delivering impactful solutions",
     icon: (
@@ -23,7 +27,8 @@ const stats = [
     ),
   },
   {
-    value: "10+",
+    value: 10,
+    suffix: "+",
     label: "Projects delivered",
     description: "Across various industries",
     icon: (
@@ -44,7 +49,8 @@ const stats = [
     ),
   },
   {
-    value: "7+",
+    value: 7,
+    suffix: "+",
     label: "Industries worked with",
     description: "Diverse experiences, deeper insight",
     icon: (
@@ -67,24 +73,51 @@ const stats = [
 ];
 
 export default function Stats() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
+      ref={ref}
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="bg-white rounded-2xl sm:rounded-3xl border border-gray-100 px-6 py-6 sm:px-8 sm:py-8 mb-2"
+      className="bg-white rounded-2xl sm:rounded-3xl border border-gray-100 px-6 py-6 sm:px-8 sm:py-8 mb-2 hover-glow"
     >
       <div className="grid grid-cols-1 sm:grid-cols-3">
         {stats.map((stat, index) => (
-          <div key={index} className="flex items-center gap-4 sm:gap-5 py-5 sm:py-0 sm:px-6 first:pt-0 sm:first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pb-0 sm:last:pr-0">
+          <div
+            key={index}
+            className="flex items-center gap-4 sm:gap-5 py-5 sm:py-0 sm:px-6 first:pt-0 sm:first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pb-0 sm:last:pr-0 hover-icon-wiggle group cursor-default"
+          >
             {/* Icon */}
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-300">
               {stat.icon}
             </div>
 
             {/* Text */}
             <div>
               <p className="text-2xl sm:text-3xl font-extrabold text-blue-600 leading-none mb-1">
-                {stat.value}
+                {isVisible ? (
+                  <CountUp end={stat.value} duration={2.5} delay={index * 0.2} />
+                ) : (
+                  "0"
+                )}
+                {stat.suffix}
               </p>
               <p className="font-bold text-gray-900 text-sm mb-0.5">{stat.label}</p>
               <p className="text-xs text-gray-400">{stat.description}</p>

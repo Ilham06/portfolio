@@ -1,11 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import CountUp from "react-countup";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="relative pb-32 pt-10 px-4 overflow-hidden">
+    <section id="about" className="relative pb-32 pt-10 px-4 overflow-hidden" ref={sectionRef}>
       <div
         className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
         data-aos="fade-up"
@@ -13,8 +32,8 @@ export default function About() {
       >
         {/* Left — image + approach card */}
         <div className="relative lg:col-span-4">
-          {/* Main image */}
-          <div className="rounded-3xl overflow-hidden shadow-sm">
+          {/* Main image with hover zoom */}
+          <div className="rounded-3xl overflow-hidden shadow-sm hover-zoom group">
             <Image
               src="/images/about-me.png"
               alt="About Ilham"
@@ -25,8 +44,8 @@ export default function About() {
             />
           </div>
 
-          {/* My approach card */}
-          <div className="absolute bottom-[-36px] right-0 translate-x-4 bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] p-5 w-52">
+          {/* My approach card — floating */}
+          <div className="absolute bottom-[-36px] right-0 translate-x-4 bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] p-5 w-52 animate-float-slow hover-lift hover-icon-wiggle cursor-default">
             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +78,7 @@ export default function About() {
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            My <span className="text-blue-600">story</span>
+            My <span className="text-gradient-blue">story</span>
           </h2>
 
           {/* Body */}
@@ -73,11 +92,11 @@ export default function About() {
             experiences that people truly value.
           </p>
 
-          {/* Stats */}
+          {/* Animated Stats */}
           <div className="flex flex-wrap gap-6">
             {/* Years of experience */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-4 hover-icon-wiggle group cursor-default">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-blue-600"
@@ -94,14 +113,16 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <p className="text-lg font-extrabold text-blue-600">4+</p>
+                <p className="text-lg font-extrabold text-blue-600">
+                  {isVisible ? <CountUp end={5} duration={2} /> : "0"}+
+                </p>
                 <p className="text-sm text-gray-500">Years of experience</p>
               </div>
             </div>
 
             {/* Client-focused */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-4 hover-icon-wiggle group cursor-default">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-blue-600"

@@ -101,7 +101,7 @@ export default function Services() {
         </span>
 
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
-          What <span className="text-blue-600">I do</span>
+          What <span className="text-gradient-blue">I do</span>
         </h2>
 
         <p className="text-gray-500 text-base leading-relaxed">
@@ -118,16 +118,16 @@ export default function Services() {
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay={index * 100}
-            className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col gap-5 hover:-translate-y-1 transition-all duration-300"
+            className="group bg-white rounded-2xl border border-gray-100 p-6 flex flex-col gap-5 hover-lift hover:border-blue-200 transition-all duration-300 cursor-default"
           >
             {/* Icon */}
-            <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 group-hover:scale-110 transition-all duration-300">
               {service.icon}
             </div>
 
             {/* Text */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-2">{service.title}</h3>
+              <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{service.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 {service.description}
               </p>

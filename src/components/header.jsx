@@ -10,25 +10,48 @@ export default function Header() {
       data-aos-duration="1100"
       className="relative text-center py-24 md:py-28 px-4 overflow-hidden"
     >
+      {/* Floating decorative shapes */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top-left floating dot */}
+        <div className="absolute top-16 left-[12%] w-3 h-3 rounded-full bg-blue-400/20 animate-float" />
+        {/* Top-right floating ring */}
+        <div className="absolute top-24 right-[15%] w-6 h-6 rounded-full border-2 border-blue-300/20 animate-float-slow" />
+        {/* Mid-left floating square */}
+        <div className="absolute top-1/2 left-[8%] w-4 h-4 rounded-md bg-blue-200/15 rotate-45 animate-float-reverse" />
+        {/* Mid-right floating dot */}
+        <div className="absolute top-1/3 right-[10%] w-2 h-2 rounded-full bg-blue-500/25 animate-float" style={{ animationDelay: '1s' }} />
+        {/* Bottom floating elements */}
+        <div className="absolute bottom-20 left-[20%] w-2.5 h-2.5 rounded-full bg-blue-300/20 animate-float-slow" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 right-[22%] w-5 h-5 rounded-full border border-blue-200/15 animate-float" style={{ animationDelay: '3s' }} />
+      </div>
+
       {/* Avatar */}
       <div className="relative flex justify-center mb-14">
-        {/* Blue radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-blue-400/30 blur-3xl" />
+        {/* Animated blue radial glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-blue-400/30 blur-3xl animate-glow-pulse" />
+
+        {/* Slowly spinning decorative ring */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-dashed border-blue-200/30 animate-spin-slow" />
+
+        {/* Orbiting dot */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="w-2 h-2 rounded-full bg-blue-400/60 animate-orbit" />
+        </div>
 
         {/* Photo circle */}
-        <div className="relative w-36 h-36 rounded-full bg-white shadow-[0_8px_40px_rgba(59,130,246,0.25)] overflow-hidden ring-4 ring-white z-10">
+        <div className="relative w-36 h-36 rounded-full bg-white shadow-[0_8px_40px_rgba(59,130,246,0.25)] overflow-hidden ring-4 ring-white z-10 group">
           <Image
             src="/images/avatar2.png"
             alt="Ilham Avatar"
             width={144}
             height={144}
             priority
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
           />
         </div>
 
         {/* Open to collaborate badge */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)] text-sm font-medium text-gray-800 whitespace-nowrap">
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)] text-sm font-medium text-gray-800 whitespace-nowrap hover-lift cursor-default">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
@@ -41,7 +64,7 @@ export default function Header() {
       <h1 className="text-[42px] sm:text-[52px] md:text-[64px] font-extrabold text-gray-900 mb-5 leading-tight">
         I turn ideas into
         <br />
-        <span className="text-blue-600">meaningful experiences</span>
+        <span className="text-gradient-blue">meaningful experiences</span>
       </h1>
 
       {/* Subtitle */}
@@ -53,10 +76,10 @@ export default function Header() {
       {/* CTA buttons */}
       <div className="flex flex-col sm:flex-row justify-center gap-4">
         <Link href="#about">
-          <button className="inline-flex items-center gap-3 px-7 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-[0_12px_30px_-8px_rgba(37,99,235,0.6)] hover:bg-blue-700 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+          <button className="group inline-flex items-center gap-3 px-7 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-[0_12px_30px_-8px_rgba(37,99,235,0.6)] hover:bg-blue-700 hover:-translate-y-1 active:translate-y-0 transition-all duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -73,10 +96,10 @@ export default function Header() {
         </Link>
 
         <Link href="#contact">
-          <button className="inline-flex items-center gap-3 px-7 py-4 bg-white text-gray-800 font-semibold rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+          <button className="group inline-flex items-center gap-3 px-7 py-4 bg-white text-gray-800 font-semibold rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 hover:border-blue-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-gray-500"
+              className="w-5 h-5 text-gray-500 transition-transform duration-300 group-hover:scale-110"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -94,22 +117,11 @@ export default function Header() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="mt-16 flex justify-center animate-bounce">
-        <Link href="#about" aria-label="Scroll down">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+      <div className="mt-16 flex justify-center">
+        <Link href="#about" aria-label="Scroll down" className="group">
+          <div className="w-8 h-12 rounded-full border-2 border-gray-300 flex justify-center pt-2 group-hover:border-blue-400 transition-colors duration-300">
+            <div className="w-1.5 h-3 rounded-full bg-gray-400 animate-bounce group-hover:bg-blue-500 transition-colors duration-300" />
+          </div>
         </Link>
       </div>
     </section>

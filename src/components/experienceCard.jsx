@@ -9,21 +9,21 @@ export default function ExperienceCard({ work }) {
 
   return (
     <Link href={`/work/${id}`} className="group block" scroll>
-      <div className="flex items-start gap-3 sm:gap-4">
+      <div className="flex items-start gap-3 sm:gap-4 p-3 -m-3 rounded-2xl hover:bg-blue-50/40 transition-all duration-300">
         {/* Logo */}
-        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-sm border border-gray-100 overflow-hidden flex items-center justify-center">
+        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-sm border border-gray-100 overflow-hidden flex items-center justify-center group-hover:shadow-md group-hover:border-blue-200 transition-all duration-300">
           <Image
             src={image}
             alt={`${company} logo`}
             width={56}
             height={56}
-            className="w-full h-full object-cover rounded-full"
+            className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
           />
         </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0 pt-0 sm:pt-0.5">
-          <p className="font-bold text-gray-900 text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug">
+          <p className="font-bold text-gray-900 text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug group-hover:text-blue-600 transition-colors duration-300">
             {role}
             <span className="font-normal text-gray-500 sm:text-gray-400 block sm:inline text-xs sm:text-base mt-0.5 sm:mt-0">
               <span className="hidden sm:inline"> · </span>{company}
@@ -35,10 +35,20 @@ export default function ExperienceCard({ work }) {
         </div>
 
         {/* Location badge */}
-        <div className="hidden sm:block flex-shrink-0 pt-0.5">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-500 text-xs font-medium whitespace-nowrap">
+        <div className="hidden sm:flex items-center gap-2 flex-shrink-0 pt-0.5">
+          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-500 text-xs font-medium whitespace-nowrap group-hover:bg-blue-100 transition-colors duration-300">
             {country}
           </span>
+          {/* Arrow on hover */}
+          <svg
+            className="w-4 h-4 text-blue-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </div>
       </div>
     </Link>
