@@ -7,7 +7,7 @@ const getEmploymentType = (role) =>
 
 export default function Experience() {
   return (
-    <section id="work" className="relative py-32 overflow-hidden bg-white rounded-3xl">
+    <section id="work" className="relative py-20 overflow-hidden bg-white rounded-3xl">
       {/* Heading */}
       <div
         className="max-w-2xl mx-auto text-center mb-16 px-4"
@@ -23,7 +23,7 @@ export default function Experience() {
       </div>
 
       {/* Timeline */}
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="mx-auto px-16">
         {works.map((work, index) => (
           <div key={index} className="flex">
             {/* Left — date + type */}
