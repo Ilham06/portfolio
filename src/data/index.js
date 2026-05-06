@@ -96,6 +96,16 @@ const works = [
     },
   ],
   stacks: ["React Native", "JavaScript", "Express JS", "REST API", "Firebase", "Git"],
+  highlights: [
+    { value: "10K+", label: "Active users", description: "Engaged with the app every month." },
+    { value: "25+", label: "Features shipped", description: "From core features to quality-of-life updates." },
+    { value: "4.8★", label: "User rating", description: "Maintained high user satisfaction." },
+  ],
+  learnings: [
+    "Building scalable and maintainable mobile applications.",
+    "Working in fast-paced environments with continuous delivery.",
+    "Understanding user needs and delivering value-driven features.",
+  ],
 },
 
 
