@@ -39,12 +39,12 @@ export default function Header() {
         </div>
 
         {/* Photo circle */}
-        <div className="relative w-36 h-36 rounded-full bg-white shadow-[0_8px_40px_rgba(59,130,246,0.25)] overflow-hidden ring-4 ring-white z-10 group">
+        <div className="relative w-44 h-44 rounded-full bg-white shadow-[0_8px_40px_rgba(59,130,246,0.25)] overflow-hidden ring-4 ring-white z-10 group">
           <Image
             src="/images/avatar2.png"
             alt="Ilham Avatar"
-            width={144}
-            height={144}
+            width={180}
+            height={180}
             priority
             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
           />
