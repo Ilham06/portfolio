@@ -5,7 +5,7 @@ export default function ContactCard({ contact }) {
   const { title, description, icon, value, url } = contact;
 
   return (
-    <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-0.5 transition-all duration-200 text-left">
+    <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:-translate-y-0.5 transition-all duration-200 text-left">
       <div className="flex items-center gap-5">
         {/* Icon box */}
         <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">

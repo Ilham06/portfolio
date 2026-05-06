@@ -118,7 +118,7 @@ export default function Services() {
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay={index * 100}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col gap-5 hover:-translate-y-1 transition-all duration-300"
           >
             {/* Icon */}
             <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">

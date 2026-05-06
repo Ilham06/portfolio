@@ -2,7 +2,7 @@ import React from "react";
 
 const stats = [
   {
-    value: "4+",
+    value: "5+",
     label: "Years of experience",
     description: "Delivering impactful solutions",
     icon: (
@@ -71,19 +71,19 @@ export default function Stats() {
     <div
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="bg-white rounded-3xl border border-gray-100 shadow-sm px-8 py-8 mb-2"
+      className="bg-white rounded-2xl sm:rounded-3xl border border-gray-100 px-6 py-6 sm:px-8 sm:py-8 mb-2"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-3">
         {stats.map((stat, index) => (
-          <div key={index} className="flex items-center gap-5 px-6 py-4 sm:py-0 first:pl-0 last:pr-0">
+          <div key={index} className="flex items-center gap-4 sm:gap-5 py-5 sm:py-0 sm:px-6 first:pt-0 sm:first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pb-0 sm:last:pr-0">
             {/* Icon */}
-            <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
               {stat.icon}
             </div>
 
             {/* Text */}
             <div>
-              <p className="text-3xl font-extrabold text-blue-600 leading-none mb-1">
+              <p className="text-2xl sm:text-3xl font-extrabold text-blue-600 leading-none mb-1">
                 {stat.value}
               </p>
               <p className="font-bold text-gray-900 text-sm mb-0.5">{stat.label}</p>

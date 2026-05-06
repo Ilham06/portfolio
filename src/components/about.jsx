@@ -7,26 +7,26 @@ export default function About() {
   return (
     <section id="about" className="relative pb-32 pt-10 px-4 overflow-hidden">
       <div
-        className="relative max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         {/* Left — image + approach card */}
-        <div className="relative">
+        <div className="relative lg:col-span-4">
           {/* Main image */}
           <div className="rounded-3xl overflow-hidden shadow-sm">
             <Image
               src="/images/about-me.png"
               alt="About Ilham"
-              width={560}
-              height={480}
+              width={460}
+              height={380}
               className="w-full h-full object-cover"
               priority
             />
           </div>
 
           {/* My approach card */}
-          <div className="absolute bottom-6 right-0 translate-x-4 bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] p-5 w-52">
+          <div className="absolute bottom-[-36px] right-0 translate-x-4 bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] p-5 w-52">
             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ export default function About() {
         </div>
 
         {/* Right — text content */}
-        <div>
+        <div className="lg:col-span-8">
           {/* Badge */}
           <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-sm font-medium bg-blue-50 text-blue-600">
             About me
