@@ -6,6 +6,7 @@ import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Header from "@/components/header";
 import Services from "@/components/services";
+import Stats from "@/components/stats";
 import useAOS from "@/hooks/useAos";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <div className="container mx-auto max-w-[1400px] px-4 lg:px-32">
           <Header />
           <About />
+          <Stats />
         </div>
       </section>
 
