@@ -50,13 +50,13 @@ export default function Header() {
           />
         </div>
 
-        {/* Open to collaborate badge */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)] text-sm font-medium text-gray-800 whitespace-nowrap hover-lift cursor-default">
+        {/* Currently at badge */}
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)] text-sm font-medium text-gray-800 whitespace-nowrap border border-transparent hover:border-blue-200 hover:shadow-[0_4px_24px_rgba(59,130,246,0.15)] transition-all duration-300 cursor-default">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
           </span>
-          Open to collaborate
+          Currently in FTL Gym as Mobile Developer
         </div>
       </div>
 
