@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* HERO + ABOUT */}
       <section className="relative">
-        <div className="container mx-auto max-w-[1200px] px-4 lg:px-32">
+        <div className="container mx-auto max-w-[1400px] px-4 lg:px-32">
           <Header />
           <About />
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* SERVICES + EXPERIENCE */}
       <section className="relative bg-[#F7F9FB]/50 backdrop-blur-sm">
-        <div className="container mx-auto max-w-[1200px] px-4 lg:px-36">
+        <div className="container mx-auto max-w-[1400px] px-4 lg:px-36">
           <Services />
           <Experience />
         </div>
@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <section className="relative">
-        <div className="container mx-auto max-w-[1200px] px-4 lg:px-32 pb-32">
+        <div className="container mx-auto max-w-[1400px] px-4 lg:px-32 pb-32">
           <Contact />
         </div>
       </section>
