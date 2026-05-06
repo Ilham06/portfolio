@@ -3,90 +3,54 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ExperienceCard({ work }) {
-  const { id, image, company, location, role, duration } = work;
+  const { id, image, company, role, summary, location } = work;
+
+  const country = location.toLowerCase().includes("jakarta") ? "Jakarta, ID" : "Indonesia";
 
   return (
-    <Link href={`/work/${id}`} className="block" scroll>
-      <article
-        className="
-          group relative overflow-hidden
-          rounded-3xl bg-white
-          px-6 py-6 lg:px-10 lg:py-8
-          border border-black/5
-          transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-          hover:-translate-y-[2px]
-        "
-        style={{
-          boxShadow:
-            "0 10px 30px -18px rgba(0,0,0,0.25)",
-        }}
-      >
-        {/* Ambient glow (tetap boleh, ini mahal) */}
-        <div className="pointer-events-none absolute -top-20 -right-20 w-60 h-60 bg-blue-200/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="pointer-events-none absolute top-20 -left-20 w-60 h-60 bg-indigo-200/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-        <div className="relative flex items-center gap-6">
-          {/* Logo – clean & premium */}
-          <div className="flex-shrink-0">
-            <div
-              className="
-                w-14 h-14 lg:w-[72px] lg:h-[72px]
-                rounded-full
-                bg-white
-                flex items-center justify-center
-                shadow-[0_8px_20px_-10px_rgba(0,0,0,0.25)]
-              "
-            >
-              <Image
-                src={image}
-                alt={`${company} logo`}
-                width={56}
-                height={56}
-                className="rounded-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="flex-1">
-            <h3
-              className="
-                text-[15px] lg:text-[17px]
-                font-semibold text-black-primary
-                tracking-tight mb-1
-              "
-            >
-              {role}
-              <span className="text-black/40 font-normal">
-                {" "}· {company}
-              </span>
-            </h3>
-
-            <p className="text-[13px] lg:text-[14px] text-black-main mb-1">
-              {duration}
-            </p>
-
-            <p className="text-[12px] lg:text-[13px] text-black/40">
-              {location}
-            </p>
-          </div>
-
-          {/* CTA */}
-          <div
-            className="
-              hidden sm:flex items-center
-              text-sm font-medium
-              text-blue-primary
-              opacity-0
-              group-hover:opacity-100
-              transition-all duration-300
-              group-hover:translate-x-1
-            "
-          >
-            View →
-          </div>
+    <Link href={`/work/${id}`} className="group block" scroll>
+      <div className="flex items-start gap-3 sm:gap-4 p-3 -m-3 rounded-2xl hover:bg-blue-50/40 transition-all duration-300">
+        {/* Logo */}
+        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-sm border border-gray-100 overflow-hidden flex items-center justify-center group-hover:shadow-md group-hover:border-blue-200 transition-all duration-300">
+          <Image
+            src={image}
+            alt={`${company} logo`}
+            width={56}
+            height={56}
+            className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
+          />
         </div>
-      </article>
+
+        {/* Content */}
+        <div className="flex-1 min-w-0 pt-0 sm:pt-0.5">
+          <p className="font-bold text-gray-900 text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug group-hover:text-blue-600 transition-colors duration-300">
+            {role}
+            <span className="font-normal text-gray-500 sm:text-gray-400 block sm:inline text-xs sm:text-base mt-0.5 sm:mt-0">
+              <span className="hidden sm:inline"> · </span>{company}
+            </span>
+          </p>
+          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed line-clamp-2">
+            {summary}
+          </p>
+        </div>
+
+        {/* Location badge */}
+        <div className="hidden sm:flex items-center gap-2 flex-shrink-0 pt-0.5">
+          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-500 text-xs font-medium whitespace-nowrap group-hover:bg-blue-100 transition-colors duration-300">
+            {country}
+          </span>
+          {/* Arrow on hover */}
+          <svg
+            className="w-4 h-4 text-blue-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
     </Link>
   );
 }

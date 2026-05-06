@@ -2,35 +2,29 @@ import React from "react";
 import Link from "next/link";
 
 export default function ContactCard({ contact }) {
+  const { title, description, icon, value, url } = contact;
+
   return (
-    <div
-      className="
-        group bg-white rounded-2xl px-6 py-8
-        border border-black/5
-        shadow-[0_10px_30px_-20px_rgba(0,0,0,0.25)]
-        transition-all duration-500
-        hover:-translate-y-[2px]
-      "
-    >
-      <div className="flex justify-center mb-4 p-4">
-        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-primary p-1">
-          {contact.icon}
+    <div className="group bg-white rounded-2xl p-8 border border-gray-100 hover-lift hover:border-blue-200 transition-all duration-300 text-left cursor-default">
+      <div className="flex items-center gap-5">
+        {/* Icon box */}
+        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:bg-blue-100 group-hover:scale-110 transition-all duration-300">
+          {icon}
+        </div>
+
+        {/* Text */}
+        <div className="min-w-0">
+          <h3 className="font-bold text-gray-900 capitalize text-base mb-1 group-hover:text-blue-600 transition-colors duration-300">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-400 mb-2">{description}</p>
+          <Link href={url} target="_blank">
+            <span className="text-sm text-blue-600 font-medium hover:underline break-all">
+              {value}
+            </span>
+          </Link>
         </div>
       </div>
-
-      <h3 className="font-semibold text-black-primary mb-2 text-lg capitalize">
-        {contact.title}
-      </h3>
-
-      <p className="text-sm text-black-main mb-3">
-        {contact.description}
-      </p>
-
-      <Link href={contact.url} target="_blank">
-        <span className="text-blue-primary font-medium text-sm">
-          {contact.value}
-        </span>
-      </Link>
     </div>
   );
 }
