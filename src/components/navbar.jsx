@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav
       data-aos="fade-down"
       data-aos-duration="1100"
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/60"
+      className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-100/60"
     >
       <div className="container mx-auto max-w-[1200px] px-4 lg:px-32 flex items-center justify-between h-16">
         {/* Logo */}
