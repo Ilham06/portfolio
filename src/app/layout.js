@@ -1,8 +1,5 @@
-import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import ScrollToTop from "@/components/common/ScrollToTop";
 
 const poppins = Poppins({
@@ -26,20 +23,14 @@ export const metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Ilham" }],
-
 };
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={poppins.className}
-      >
-        <ScrollToTop/>
-        <Navbar />
+      <body className={poppins.className}>
+        <ScrollToTop />
         {children}
-        <Footer/>
       </body>
     </html>
   );
