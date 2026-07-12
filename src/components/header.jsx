@@ -75,7 +75,7 @@ export default function Header() {
 
       {/* CTA buttons */}
       <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <Link href="#about">
+        <Link href="/portfolio" className="group">
           <button className="group inline-flex items-center gap-3 px-7 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-[0_12px_30px_-8px_rgba(37,99,235,0.6)] hover:bg-blue-700 hover:-translate-y-1 active:translate-y-0 transition-all duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
