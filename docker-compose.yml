@@ -3,6 +3,7 @@ version: "3.9"
 services:
   portfolio:
     container_name: ilham-portfolio
+    image: ghcr.io/ilham06/portfolio:latest
     build: .
     ports:
       - "3000:3000"
